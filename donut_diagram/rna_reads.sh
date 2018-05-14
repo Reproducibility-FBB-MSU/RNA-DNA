@@ -1,0 +1,6 @@
+# под флагом а нужно поставить нужный файл с ридами. полученные данные перенести в папку 'rna_reads'
+bedtools intersect -a rna_dna_K562_chr18_19.tab -b exon_bed.dms -wa > 'rna_read_exon'
+bedtools intersect -a rna_dna_K562_chr18_19.tab -b intron_bed.dms -wa > 'rna_read_intron'
+bedtools intersect -a rna_dna_K562_chr18_19.tab -b upstream_200_bed.dms -wa > 'rna_read_upstream'
+bedtools intersect -a rna_dna_K562_chr18_19.tab -b downstream_200_bed.dms -wa > 'rna_read_downstream'
+bedtools intersect -a rna_dna_K562_chr18_19.tab -b exon_bed.dms intron_bed.dms -v -wa > 'rna_read_nongenic'
