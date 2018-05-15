@@ -40,9 +40,9 @@ lengths_df = pd.read_csv("length_chrom", sep="\t", header=None)
 
 if res.all:
     start_chr = 'chr1'
-    end_chr = 'chr23'
+    end_chr = 'chr25'
     start_point = 1
-    end_point = 156040895
+    end_point = 16569
 
 elif res.end_point == 'end':
     if end_chr == 'chrX':
